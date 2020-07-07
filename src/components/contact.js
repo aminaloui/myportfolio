@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Cell, List, ListItem, ListItemContent } from 'react-mdl';
 
 
+
 class Contact extends Component {
     render() {
         return (
@@ -29,7 +30,7 @@ Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem
                                     <ListItemContent style={{ fontSize: '30px', fontFamily: 'Anton' }}>
 
                                         <i className="fa fa-linkedin" aria-hidden="true" />
-                                        <a href="https://www.linkedin.com/in/amin-a-1b3316152/" target="_blank" style={{ color: 'black' }}>linkedin.com/in/amin-a-1b3316152/</a>
+                                        <a href="https://www.linkedin.com/in/amin-a-1b3316152/" target="_blank" rel="noopener noreferrer" style={{ color: 'black' }}>linkedin.com/in/amin-a-1b3316152/</a>
                                     </ListItemContent>
                                 </ListItem>
                                 <ListItem>
