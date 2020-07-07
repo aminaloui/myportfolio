@@ -106,20 +106,14 @@ class Cv extends Component {
                             progress={50}
                         />
                         <h3>Hobby's</h3>
-                        <Hobbys
-                            
-                            hobby={"Gamen"}
-                            icon={"fa fa-gamepad"}
-                            
-                        />
-                        
+                    
                          <Hobbys
                             
                             hobby={"Koken"}
                             icon={"fa fa-cutlery"}
                             
                         />
-                         <Hobbys
+                         <Hobbys 
                             
                             hobby={"Reizen"}
                             icon={"fa fa-plane"}
