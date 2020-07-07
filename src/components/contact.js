@@ -9,12 +9,13 @@ class Contact extends Component {
             <div className="contact-body">
                 <Grid className="contact-grid">
                     <Cell col={6} >
+                    <img src="/images/avatarcontact.jpg" alt="avatar" style={{ height: '400px' , width: '600px'}} />
                         <h2>Amin Aloui</h2>
-                        <img src="/images/avatarcontact.jpg" alt="avatar" style={{ height: '250px' }} />
-                        <p style={{ width: '75%', margin: 'auto', paddingTop: '1em' }}>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        "Er is niemand die van pijn zelf houdt, die het zoekt en die het hebben wil, eenvoudigweg omdat het pijn is... Wat is Lorem Ipsum?
-Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken. </p>
+                        <p style={{ width: '75%', margin: 'auto', paddingTop: '1em' }}>
+Mijn interesse in programmeren is voor mij begonnen tijdens mijn tussenjaar. Ik had toen veel vrije tijd waarin ik mezelf heb aangeleerd te werken met HTML en CSS. Door middel van verschillende online cursussen en oefenopdrachten ben ik erachter gekomen dat ik hier nog veel meer over wil leren en een carrière van wil maken en heb ik me daarom aangemeld voor de opleiding ICT Software development. Tijdens mijn huidige opleiding bij YoungCapital Next heb ik leren werken met Python, Java, Javascript , Html en css . Mijn streefdoel is om zo veel
+mogelijk ervaring op programmeergebied te kunnen opdoen.</p>
                     </Cell>
+                    
                     <Cell col={6}>
                         <h2>Neem contact met mij op</h2>
                         <hr />
@@ -23,7 +24,7 @@ Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem
                                 <ListItem>
                                     <ListItemContent style={{ fontSize: '30px', fontFamily: 'Anton' }}>
                                         <i className="fa fa-phone-square" aria-hidden="true" />
-                                        (+316) 40665465
+                                        (+316) 40******
                                         </ListItemContent>
                                 </ListItem>
                                 <ListItem>

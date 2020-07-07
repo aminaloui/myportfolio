@@ -9,20 +9,20 @@ function App() {
   return (
     <div className="demo-big-content">
       <Layout>
-        <Header className= "header-color" title={<Link style={{textDecoration: 'none', color: 'white', fontSize:'30px'}} to="/">Mijn Portfolio </Link>}scroll>
+        <Header className= "header-color" title={<Link style={{textDecoration: 'none', color: 'white', fontSize:'35px', fontFamily: 'Nunito ,sans-serif'}} to="/">Mijn Portfolio </Link>}scroll>
           <Navigation>
-            <Link to="/cv" style={{fontSize: '20px'}}>CV</Link>
-            <Link to="/overmij"style={{fontSize: '20px'}}>Over Mij</Link>
-            <Link to="/projecten"style={{fontSize: '20px'}}>Projecten</Link>
-            <Link to="/contact"style={{fontSize: '20px'}}>Contact</Link>
+            <Link to="/cv" style={{fontSize: '25px',fontFamily: 'Nunito ,sans-serif'}}>CV</Link>
+            <Link to="/overmij"style={{fontSize: '25px',fontFamily: 'Nunito ,sans-serif'}}>Over Mij</Link>
+            <Link to="/projecten"style={{fontSize: '25px',fontFamily: 'Nunito ,sans-serif'}}>Projecten</Link>
+            {/* <Link to="/contact"style={{fontSize: '20px'}}>Contact</Link> */}
           </Navigation>
         </Header>
-        <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}} to="/">Mijn Portfolio </Link>}>
+        <Drawer title={<Link style={{textDecoration: 'none', color: 'black', fontFamily: 'Nunito ,sans-serif'}} to="/">Mijn Portfolio </Link>}>
           <Navigation>
-            <Link to="/cv">CV</Link>
-            <Link to="/overmij">Over Mij</Link>
-            <Link to="/projecten">Projecten</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/cv" style={{fontSize: '20px', fontFamily: 'Nunito ,sans-serif'}}>CV</Link>
+            <Link to="/overmij" style={{fontSize: '20px',fontFamily: 'Nunito ,sans-serif'}}>Over Mij</Link>
+            <Link to="/projecten" style={{fontSize: '20px',fontFamily: 'Nunito ,sans-serif'}}>Projecten</Link>
+            {/* <Link to="/contact">Contact</Link> */}
           </Navigation>
         </Drawer>
         <Content>

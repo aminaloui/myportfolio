@@ -3,6 +3,7 @@ import { Grid, Cell } from 'react-mdl';
 import Opleidingen from './opleidingen';
 import Werkervaringen from './werkervaringen';
 import Skills from './skills';
+import Hobbys from './hobbys';
 
 
 class Cv extends Component {
@@ -11,26 +12,24 @@ class Cv extends Component {
             <div>
                 <Grid>
 
-                    <Cell col={4}>
+                    <Cell col={4} >
                         <div style={{ textAlign: 'center' }}>
-                            <img src="/images/avatar.png" alt="avatar" style={{ height: '300px' }} />
-
+                            <img src="/images/avatar.png" alt="avatar" style={{ height: '300px', }} />
                         </div>
                         <h2 style={{ paddingTop: '2em' }}>Amin Aloui</h2>
                         <h4 style={{ color: 'grey' }}> Junior Software Developer</h4>
                         <hr style={{ borderTop: '3px solid #833f62', width: '50%' }} />
-                        <p> "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        "Er is niemand die van pijn zelf houdt, die het zoekt en die het hebben wil, eenvoudigweg omdat het pijn is..."
-                        Wat is Lorem Ipsum?
-                        Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus te maken.
+                        <p> Mijn interesse in programmeren is voor mij begonnen tijdens mijn tussenjaar. Ik had toen veel vrije tijd waarin ik mezelf heb aangeleerd te werken met HTML en CSS. Door middel van verschillende online cursussen en oefenopdrachten ben ik erachter gekomen dat ik hier nog veel meer over wil leren en een carrière van wil maken en heb ik me daarom aangemeld voor de opleiding ICT Software development. Tijdens mijn huidige opleiding bij YoungCapital Next heb ik leren werken met Python, Java, Javascript , Html en css . Mijn streefdoel is om zo veel
+                        mogelijk ervaring op programmeergebied te kunnen opdoen.
                         </p>
                         <hr style={{ borderTop: '3px solid #833f62', width: '50%' }} />
-                        <h5>Addres</h5>
-                        <p>Hacker way, Menlo Park, 94025</p>
-                        <h5>Phone</h5>
-                        <p>(+316) 40665465</p>
                         <h5>Email</h5>
                         <p>Theaminaloui@hotmail.com</p>
+
+                        <h5>Geboorte datum</h5>
+                        <p>19-08-1997</p>
+                        <h5>Rijbewijs</h5>
+                        <p>Ja</p>
                         <hr style={{ borderTop: '3px solid #833f62', width: '50%' }} />
                     </Cell>
                     <Cell className="cv-right-col" col={8}>
@@ -46,7 +45,7 @@ class Cv extends Component {
                             startYear={2012}
                             endYear={2018}
                             schoolName={"Bedrijfskunde MER"}
-                            schoolDescription={"Er is niemand die van pijn zelf houdt, die het zoekt en die het hebben wil, eenvoudigweg omdat het pijn is...Er is niemand die van pijn zelf houdt, die het zoekt en die het hebben wil, eenvoudigweg omdat het pijn is..."
+                            schoolDescription={""
                             } />
                         <Opleidingen
                             startYear={2015}
@@ -66,41 +65,68 @@ class Cv extends Component {
 
                         <h3>Werkervaringen</h3>
                         <Werkervaringen
-                            startYear={2018}
-                            endYear={2020}
-                            jobName={"Acorel Commerce - Alkmaar"}
+                            startYear={"07-2020"}
+                            endYear={"08-2020"}
+                            jobName={"Stage bij Indocs - Utrecht"}
                             jobDescription={"Als software developer bij Acorel Commerce, heb ik me bezig gehouden met het bouwen van commerce platforms voor grote klanten. Het eerste project waar ik aan heb gewerkt , was voor bavaria (Bavaria Cashback actie). Hier heb ik in Java aan gewerkt met het webframework Spring. Hiernaast heb ik me bij Acorel ook bezig gehouden met bugfixing en het analyseren van logbestanden."}
                         />
+
                         <Werkervaringen
-                            startYear={2018}
-                            endYear={2020}
+                            startYear={"12-2018"}
+                            endYear={"05-2020"}
                             jobName={"Acorel Commerce - Alkmaar"}
                             jobDescription={"Als software developer bij Acorel Commerce, heb ik me bezig gehouden met het bouwen van commerce platforms voor grote klanten. Het eerste project waar ik aan heb gewerkt , was voor bavaria (Bavaria Cashback actie). Hier heb ik in Java aan gewerkt met het webframework Spring. Hiernaast heb ik me bij Acorel ook bezig gehouden met bugfixing en het analyseren van logbestanden."}
                         />
 
+
                         <hr style={{ borderTop: '3px solid #833f62' }} />
                         <h2>Skills</h2>
                         <Skills
-                        skill={"HTML/CSS"}
-                        progress={80}
+                            skill={"HTML/CSS"}
+                            progress={80}
                         />
-                         <Skills
-                        skill={"JavaScript"}
-                        progress={75}
+                        <Skills
+                            skill={"JavaScript"}
+                            progress={75}
                         />
-                         <Skills
-                        skill={"ReactJs"}
-                        progress={60}
+                        <Skills
+                            skill={"ReactJs"}
+                            progress={60}
                         />
-                         <Skills
-                        skill={"Java"}
-                        progress={50}
+                        <Skills
+                            skill={"Java"}
+                            progress={50}
                         />
-                         <Skills
-                        skill={"Python"}
-                        progress={50}
+                        <Skills
+                            skill={"Python"}
+                            progress={50}
+                        />
+                        <Skills
+                            skill={"Django"}
+                            progress={50}
+                        />
+                        <h3>Hobby's</h3>
+                        <Hobbys
+                            
+                            hobby={"Gamen"}
+                            icon={"fa fa-gamepad"}
+                            
                         />
                         
+                         <Hobbys
+                            
+                            hobby={"Koken"}
+                            icon={"fa fa-cutlery"}
+                            
+                        />
+                         <Hobbys
+                            
+                            hobby={"Reizen"}
+                            icon={"fa fa-plane"}
+                            
+                        />
+
+
 
                     </Cell>
 

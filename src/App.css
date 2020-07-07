@@ -27,6 +27,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  
 }
 
 .landing-grid-tablet {
@@ -42,6 +43,10 @@
 }
 .projects-grid{
   display: flex;
+  
+}
+.projects-grid-mobile{
+  display: inline;
   
 }
 
@@ -129,7 +134,21 @@ margin: auto;
     font-size: 20px;
     padding: 1em;
   }
-
+  .cv-icons{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    
+    
+    }
+    
+    .cv-icons i{
+    
+      color: white;
+    font-size: 3em;
+    padding: 8px;
+    }
+    
   /*Desktop*/
 .social-links-desktop {
 display: flex;
@@ -139,6 +158,7 @@ margin: auto;
 
 
 }
+
 .social-links-desktop i {
 color: white;
 font-size: 5em;
@@ -182,7 +202,6 @@ padding: 8px;
 
 .contact-body{
   margin: auto;
- 
   position: fixed;
   width: 100%;
   height: 100%;
@@ -225,4 +244,15 @@ margin: auto;
 background: #27221f;
 color: white;
 padding: 3em;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

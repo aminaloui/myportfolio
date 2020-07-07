@@ -14,12 +14,11 @@ class Projecten extends Component {
                 <div className="projects-grid">
                 {/*Project 1*/}
                 <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-                <CardTitle style={{color: '#000', height: '176px', background: 'url() center / cover' }}> React Project #1 </CardTitle>
+                <CardTitle style={{color: '#000', height: '176px', background: 'url(https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg) center / cover' }}></CardTitle>
                 <CardText> Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw.</CardText>
                 <CardActions border>
-                <Button colored>Github</Button>
-                <Button colored>Code</Button>
-                <Button colored>Live Demo</Button>
+                <Button colored style={{width:"100%"}}>Github</Button>
+            
                 </CardActions>
                 <CardMenu style={{color:'#fff'}}>
                     <IconButton name="share"/>
@@ -28,12 +27,11 @@ class Projecten extends Component {
                 </Card>
                         {/*Project 2*/}
                         <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-                <CardTitle style={{color: '#000', height: '176px', background: 'url() center / cover' }}> React Project #2 </CardTitle>
+                <CardTitle style={{color: '#000', height: '176px', background: 'url(https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg) center / cover' }}> </CardTitle>
                 <CardText> Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw.</CardText>
                 <CardActions border>
-                <Button colored>Github</Button>
-                <Button colored>Code</Button>
-                <Button colored>Live Demo</Button>
+                <Button colored style={{width:"100%"}}>Github</Button>
+         
                 </CardActions>
                 <CardMenu style={{color:'#fff'}}>
                     <IconButton name="share"/>
@@ -42,12 +40,11 @@ class Projecten extends Component {
                 </Card>
                         {/*Project 3*/}
                         <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-                <CardTitle style={{color: '#000', height: '176px', background: 'url() center / cover' }}> React Project #3 </CardTitle>
+                <CardTitle style={{color: '#000', height: '176px', background: 'url(https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg) center / cover' }}>  </CardTitle>
                 <CardText> Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw.</CardText>
                 <CardActions border>
-                <Button colored>Github</Button>
-                <Button colored>Code</Button>
-                <Button colored>Live Demo</Button>
+                <Button colored style={{width:"100%"}}>Github</Button>
+           
                 </CardActions>
                 <CardMenu style={{color:'#fff'}}>
                     <IconButton name="share"/>
@@ -58,12 +55,69 @@ class Projecten extends Component {
             )
         } else if (this.state.activeTab === 1) {
             return (
-                <div><h1>This is Java</h1></div>
+                <div><h4>Coming Soon</h4></div>
             )
         }
         else if (this.state.activeTab === 2) {
             return (
-                <div><h1>This is Python</h1></div>
+                <div><h4>Coming Soon </h4></div>
+            )
+        }
+    }
+    toggleCategoriesMobile() {
+        if (this.state.activeTab === 0) {
+            return (
+                <div className="projects-grid-mobile">
+                {/*Project 1*/}
+                <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+                    
+                <CardTitle style={{color: '#000', height: '176px', background: 'url(https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg) center / cover' }}>  </CardTitle>
+                <CardText> Mijn Portfolio heb ik gebouwd in Reactjs. Bekijk mijn project op Github</CardText>
+                <CardActions border>
+                
+              
+                </CardActions>
+                <CardMenu style={{color:'#fff'}}>
+                    <IconButton name="share"/>
+
+                </CardMenu>
+                </Card>
+                        {/*Project 2*/}
+                        <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+                <CardTitle style={{color: '#000', height: '176px', background: 'url(https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg) center / cover' }}>  </CardTitle>
+                <CardText> Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw.</CardText>
+                <CardActions border>
+                <Button colored style={{width:"100%"}}>Github</Button>
+                
+                </CardActions>
+                <CardMenu style={{color:'#fff'}}>
+                    <IconButton name="share"/>
+
+                </CardMenu>
+                </Card>
+                        {/*Project 3*/}
+                        <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+                <CardTitle style={{color: '#000', height: '176px', background: 'url(https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg) center / cover' }}>  </CardTitle>
+                <CardText> Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw.</CardText>
+                <CardActions border>
+                <Button colored style={{width:"100%"}}>Github</Button>
+            
+                </CardActions>
+                <CardMenu style={{color:'#fff'}}>
+                    <IconButton name="share"/>
+
+                </CardMenu>
+                </Card>
+                </div>
+            )
+        } else if (this.state.activeTab === 1) {
+            return (
+                <div><h3>Comming soon</h3></div>
+            )
+        }
+        else if (this.state.activeTab === 2) {
+            return (
+                <div><h3>Comming soon</h3></div>
             )
         }
     }
@@ -74,19 +128,28 @@ class Projecten extends Component {
         return (
             <div className="category-tabs">
                 <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-                    <Tab>React</Tab>
+                    <Tab>Html / Css/ ReactJS</Tab>
                     <Tab>Java</Tab>
-                    <Tab>Python</Tab>
+                    <Tab>Python / Django</Tab>
                 </Tabs>
 
                
                     <Grid>
-                        <Cell col={12}>
+                        <Cell col={12}hidePhone="true" hideTablet="true" >
                             <div className="content">{this.toggleCategories()} </div>
 
                         </Cell>
 
                     </Grid>
+
+                    <Grid>
+                        <Cell col={2} phone={6}  hideDesktop="true" hideTablet="true" >
+                            <div className="content">{this.toggleCategoriesMobile()} </div>
+
+                        </Cell>
+
+                    </Grid>
+                   
                     
 
             
