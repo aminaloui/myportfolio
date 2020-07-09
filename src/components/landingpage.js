@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
+import { Helmet } from 'react-helmet';
 
 class LandingPage extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { title : "Amin Aloui", description:"Mijn Portfolio"};
+    }
 
 
     render() {
@@ -39,7 +44,11 @@ class LandingPage extends Component {
                                 </a>
 
                             </div>
-
+                            <Helmet>
+                                <title>{this.state.title}</title>
+                                <meta name="description"
+                                    content={this.state.description} />
+                            </Helmet>
                         </div>
 
 

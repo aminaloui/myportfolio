@@ -219,7 +219,7 @@ class Projecten extends Component {
 
                
                     <Grid>
-                        <Cell col={12}hidePhone="true" hideTablet="true" >
+                        <Cell col={6}hidePhone="true" hideTablet="true" >
                             <div className="content">{this.toggleCategories()} </div>
 
                         </Cell>
