@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 class LandingPage extends Component {
     constructor(props) {
         super(props)
-        this.state = { title : "Amin Aloui", description:"Mijn Portfolio"};
+        this.state = { title : " Amin Aloui ", description:"Mijn Portfolio"};
     }
 
 
@@ -20,7 +20,7 @@ class LandingPage extends Component {
                         <div className="banner-text-desktop">
                             <h1>Junior Software Developer</h1>
                             <hr />
-                            <p>HTML/CSS | JavaScript | ReactJs | Java | Python</p>
+                            <p>HTML/CSS | JavaScript | React.js | Java | Python</p>
 
                             <div className="social-links-desktop">
 
@@ -42,6 +42,8 @@ class LandingPage extends Component {
                                 <a href="mailto:theaminaloui@hotmail.com" target="_blank" rel="noopener noreferrer">
                                     <i className="fa fa-envelope-square" aria-hidden="true" />
                                 </a>
+
+                                
 
                             </div>
                             <Helmet>

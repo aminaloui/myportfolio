@@ -45,7 +45,7 @@ class Cv extends Component {
                             startYear={2012}
                             endYear={2018}
                             schoolName={"Bedrijfskunde MER"}
-                            schoolDescription={""
+                            schoolDescription={"De opleiding bedrijfskunde MER heb ik aan de Hogeschool van Amsterdam gevolgd. Deze opleiding heb ik niet afgerond."
                             } />
                         <Opleidingen
                             startYear={2015}
@@ -68,7 +68,7 @@ class Cv extends Component {
                             startYear={"07-2020"}
                             endYear={"08-2020"}
                             jobName={"Stage bij Indocs - Utrecht"}
-                            jobDescription={"Als software developer bij Acorel Commerce, heb ik me bezig gehouden met het bouwen van commerce platforms voor grote klanten. Het eerste project waar ik aan heb gewerkt , was voor bavaria (Bavaria Cashback actie). Hier heb ik in Java aan gewerkt met het webframework Spring. Hiernaast heb ik me bij Acorel ook bezig gehouden met bugfixing en het analyseren van logbestanden."}
+                            jobDescription={"Tijdens mijn huidige (Zomer)stage bij Indocs in Utrecht, leer ik door middel van trainingen om met het low code-platform K2 te werken en krijg ik trainingen in SQL. Na de trainingen is het de bedoeling om Business Applicaties te bouwen. Zowel intern als voor klanten worden dit soort Business Apps gebruikt."}
                         />
 
                         <Werkervaringen
