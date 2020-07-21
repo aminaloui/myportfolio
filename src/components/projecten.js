@@ -26,7 +26,7 @@ class Projecten extends Component {
                         <CardText><h4>Boodschappenlijst</h4>
                             <p>In de applicatie meld je je via je google account aan en kun je een boodschappenlijstje opzetten. De objecten worden opgeslagen in een firebase database.</p></CardText>
                         <CardActions border>
-                            <Button disabled colored style={{ width: "100%" }}>Github</Button>
+                        <Button colored style={{ width: "100%" }}><a href="https://github.com/aminaloui/boodschappen-lijst">Github</a></Button>
                         </CardActions>
                     </Card>
                 </div>
@@ -78,6 +78,7 @@ class Projecten extends Component {
                         <CardText><h4>Boodschappenlijst</h4>
                             <p>In de applicatie meld je je via je google account aan en kun je een boodschappenlijstje opzetten. De objecten worden opgeslagen in een firebase database. </p></CardText>
                         <CardActions border>
+                        <Button colored style={{ width: "100%" }}><a href="https://github.com/aminaloui/boodschappen-lijst">Github</a></Button>
                         </CardActions>
                     </Card>
                 </div>
@@ -140,7 +141,7 @@ class Projecten extends Component {
                         <CardText><h4>Boodschappenlijst</h4>
                             <p>In de applicatie meld je je via je google account aan en kun je een boodschappenlijstje opzetten. De objecten worden opgeslagen in een firebase database. </p></CardText>
                         <CardActions border>
-
+                        <Button colored style={{ width: "100%" }}><a href="https://github.com/aminaloui/boodschappen-lijst">Github</a></Button>
                         </CardActions>
 
                     </Card>
