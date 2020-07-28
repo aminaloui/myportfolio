@@ -42,7 +42,7 @@ class Cv extends Component {
                             schoolDescription={"De eerste 3 maanden heb ik tijdens de opleiding een bootcamp gevolgd waarbij ik verschillende programmeertalen heb geleerd. Vervolgens ga ik 4 dagen in de week werken en 1 dag per week naar school. Naast de programmeertalen die ik heb geleerd, heb ik ook aan mijn soft skills gewerkt zoals presentatie- , communicatie-, en gespreksvaardigheden."
                             } />
                         <Opleidingen
-                            startYear={2012}
+                            startYear={2017}
                             endYear={2018}
                             schoolName={"Bedrijfskunde MER"}
                             schoolDescription={"De opleiding bedrijfskunde MER heb ik aan de Hogeschool van Amsterdam gevolgd. Deze opleiding heb ik niet afgerond."
