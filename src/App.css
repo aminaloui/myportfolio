@@ -44,7 +44,7 @@
 }
 .projects-grid{
   display: flex;
-  flex-direction: row | row-reverse | column | column-reverse;
+  flex-direction: row  row-reverse  column  column-reverse;
 }
 .projects-grid-mobile{
   display: inline;

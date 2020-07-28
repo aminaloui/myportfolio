@@ -33,7 +33,7 @@ class Projecten extends Component {
             )
         } else if (this.state.activeTab === 1) {
             return (
-                <div>{/*Java*/}
+                <div className="projects-grid">{/*Java*/}
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://www.biernet.nl/images/brouwerij/55296-Bavaria%20logo.jpg) center / cover' }}></CardTitle>
                         <CardText><h4>Bavaria Cashback</h4>
@@ -41,12 +41,24 @@ class Projecten extends Component {
                         <CardActions border>
                             <Button colored style={{ width: "100%" }} ><a href="https://cashback.bavaria.com">Website</a></Button>
                         </CardActions>
-                    </Card></div>
+                    </Card>
+
+                    <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+                        <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://i.ytimg.com/vi/2LXfnnlqa2w/maxresdefault.jpg) center / cover' }}></CardTitle>
+                        <CardText><h4>Itsme (SchultzeErbse)</h4>
+                            <p>Tijdens mijn werkzaamheden bij Acorel Commerce in Alkmaar, heb ik met trots mee mogen werken aan het webapplicatie voor elektrogroothandel SchultzeErbse. Mijn taken waren onder andere: bugfixing, componten bouwen, data importeren, testen etc.</p></CardText>
+                        <CardActions border>
+                            <Button colored style={{ width: "100%" }} ><a href="https://www.itsmenederland.nl/">Website</a></Button>
+                        </CardActions>
+                    </Card>
+                    </div>
+
+                    
             )
         }
         else if (this.state.activeTab === 2) {
             return (
-                <div>{/*Python*/}
+                <div className="projects-grid">{/*Python*/}
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://indigo.amsterdam/wp-content/uploads/2017/05/python-django-logo-1024x576.jpg) center / cover' }}></CardTitle>
                         <CardText><h4>Foodify</h4>
@@ -85,7 +97,7 @@ class Projecten extends Component {
             )
         } else if (this.state.activeTab === 1) {
             return (
-                <div>
+                <div className="projects-grid-mobile">
                     {/*Java*/}
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://www.biernet.nl/images/brouwerij/55296-Bavaria%20logo.jpg) center / cover' }}></CardTitle>
@@ -95,12 +107,21 @@ class Projecten extends Component {
                             <Button colored style={{ width: "100%" }} ><a href="https://cashback.bavaria.com">Website</a></Button>
                         </CardActions>
                     </Card>
+
+                    <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+                        <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://i.ytimg.com/vi/2LXfnnlqa2w/maxresdefault.jpg) center / cover' }}></CardTitle>
+                        <CardText><h4>Itsme (SchultzeErbse)</h4>
+                            <p>Tijdens mijn werkzaamheden bij Acorel Commerce in Alkmaar, heb ik met trots mee mogen werken aan het webapplicatie voor elektrogroothandel SchultzeErbse. Mijn taken waren onder andere: bugfixing, componten bouwen, data importeren, testen etc.</p></CardText>
+                        <CardActions border>
+                            <Button colored style={{ width: "100%" }} ><a href="https://www.itsmenederland.nl/">Website</a></Button>
+                        </CardActions>
+                    </Card>
                 </div>
             )
         }
         else if (this.state.activeTab === 2) {
             return (
-                <div>
+                <div className="projects-grid-mobile">
                     {/*Python 1*/}
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://indigo.amsterdam/wp-content/uploads/2017/05/python-django-logo-1024x576.jpg) center / cover' }}></CardTitle>
@@ -123,7 +144,7 @@ class Projecten extends Component {
     toggleCategoriesTablet() {
         if (this.state.activeTab === 0) {
             return (
-                <div className="projects-grid-tablet">
+                <div className="projects-grid">
                     {/*Project 1*/}
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://miro.medium.com/max/3600/1*HSisLuifMO6KbLfPOKtLow.jpeg) center / cover' }}></CardTitle>
@@ -149,7 +170,7 @@ class Projecten extends Component {
             )
         } else if (this.state.activeTab === 1) {
             return (
-                <div>
+                <div className="projects-grid">
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://www.biernet.nl/images/brouwerij/55296-Bavaria%20logo.jpg) center / cover' }}></CardTitle>
 
@@ -161,12 +182,21 @@ class Projecten extends Component {
 
                     </Card>
 
+                    <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+                        <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://i.ytimg.com/vi/2LXfnnlqa2w/maxresdefault.jpg) center / cover' }}></CardTitle>
+                        <CardText><h4>Itsme (SchultzeErbse)</h4>
+                            <p>Tijdens mijn werkzaamheden bij Acorel Commerce in Alkmaar, heb ik met trots mee mogen werken aan de webapplicatie voor elektrogroothandel SchultzeErbse. Mijn taken waren onder andere: bugfixing, Componten bouwen, data importeren/exporteren, testen etc.</p></CardText>
+                        <CardActions border>
+                            <Button colored style={{ width: "100%" }} ><a href="https://www.itsmenederland.nl/">Website</a></Button>
+                        </CardActions>
+                    </Card>
+
                 </div>
             )
         }
         else if (this.state.activeTab === 2) {
             return (
-                <div>
+                <div className="projects-grid">
                     <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
                         <CardTitle style={{ color: '#000', height: '176px', background: 'url(https://indigo.amsterdam/wp-content/uploads/2017/05/python-django-logo-1024x576.jpg) center / cover' }}></CardTitle>
 
