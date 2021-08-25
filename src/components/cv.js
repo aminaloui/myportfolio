@@ -64,6 +64,12 @@ class Cv extends Component {
                         <hr style={{ borderTop: '3px solid #833f62' }} />
 
                         <h3>Werkervaringen</h3>
+                         <Werkervaringen
+                            startYear={"09-2020"}
+                            endYear={"Heden"}
+                            jobName={"9 Knots - De Kwakel, Uithoorn"}
+                            jobDescription={"Als Junior Developer bij 9 Knots hou ik mij bezig met het ontwikkelen van bedrijfssoftware. Dit wordt gedaan binnen 9 Knots haar eigen framework ,genaamd CaseMaster, in combinatie van SQL. Binnen het framework werdt er ook met HTML,CSS en JavaScript gewerkt. De klanten van 9 Knots komen voornamelijk uit de sierteeltsector."}
+                        />
                         <Werkervaringen
                             startYear={"07-2020"}
                             endYear={"08-2020"}
