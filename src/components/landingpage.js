@@ -1,49 +1,52 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Typewriter } from 'react-simple-typewriter'
 import { Helmet } from 'react-helmet';
+import {Grid} from '@mui/material';
 
 class LandingPage extends Component {
     constructor(props) {
         super(props)
-        this.state = { title : " Amin Aloui ", description:"Mijn Portfolio"};
+        this.state = { title: " Amin Aloui ", description: "Mijn Portfolio" };
     }
 
-
     render() {
-
         return (
+         
             <div style={{ width: '100%', margin: 'auto' }}>
+                
                 <Grid className="landing-grid">
-                    <Cell col={12} hidePhone="true" hideTablet="true">
-                        <img src="/images/avatar.png" alt="avatar" className="avatar-img" />
-
-                        <div className="banner-text-desktop">
-                            <h1>Junior Software Developer</h1>
-                            <hr />
-                            <p>HTML/CSS | JavaScript | React.js | Java | Python</p>
+                  
+                        <img src="/images/avatar3.png" alt="avatar" className="avatar-img moveUpDown"/>
+                        <div className="banner-text-desktop moveUpDown">
+                            <h1>
+                               
+                            <Typewriter
+                            loop
+                            cursor
+                            cursorStyle="|"
+                            typeSpeed={70}
+                            deleteSpeed={150}
+                            delaySpeed={1000}
+                            words={[' Front-end Developer', ' Software Developer', ' App Developer']}
+                            />
+                            </h1>
+                            <hr/>
+                            <p>HTML | CSS | JavaScript | React.js | Java | Python</p>
 
                             <div className="social-links-desktop">
 
                                 {/*Linkedin*/}
-                                <a href="https://www.linkedin.com/in/amin-a-1b3316152/" target="_blank" rel="noopener noreferrer">
-
+                                <a href="https://www.linkedin.com/in/amin-a-1b3316152/" target="_blank" rel="noopener noreferrer" className="zoom-box">
                                     <i className="fa fa-linkedin-square" aria-hidden="true" />
-
                                 </a>
-
-
                                 {/*Github*/}
-                                <a href="https://github.com/aminaloui" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/aminaloui" target="_blank" rel="noopener noreferrer" className="zoom-box">
                                     <i className="fa fa-github-square" aria-hidden="true" />
                                 </a>
-
-
                                 {/*Email*/}
-                                <a href="mailto:theaminaloui@hotmail.com" target="_blank" rel="noopener noreferrer">
+                                <a href="mailto:aminaloui1@gmail.com" target="_blank" rel="noopener noreferrer" className="zoom-box">
                                     <i className="fa fa-envelope-square" aria-hidden="true" />
                                 </a>
-
-                                
 
                             </div>
                             <Helmet>
@@ -54,90 +57,11 @@ class LandingPage extends Component {
                         </div>
 
 
-
-
-                    </Cell>
-
-
+                   
 
 
                 </Grid>
-                <Grid className="landing-grid-phone">
 
-                    <Cell col={2} phone={4} hideDesktop="true" hideTablet="true" >
-                        <img src="/images/avatar.png" alt="avatar" className="avatar-img" />
-
-                        <div className="banner-text-mobile">
-                            <h1>Junior Software Developer</h1>
-                            <hr />
-                            <p>HTML/CSS | JavaScript | ReactJs | Java | Python</p>
-                            <div className="social-links-mobile">
-
-                                {/*Linkedin*/}
-                                <a href="https://www.linkedin.com/in/amin-a-1b3316152/" target="_blank" rel="noopener noreferrer">
-
-                                    <i className="fa fa-linkedin-square" aria-hidden="true" />
-
-                                </a>
-
-
-                                {/*Github*/}
-                                <a href="https://github.com/aminaloui" target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-github-square" aria-hidden="true" />
-                                </a>
-
-
-                                {/*Email*/}
-                                <a href="mailto:theaminaloui@hotmail.com" target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-envelope-square" aria-hidden="true" />
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-
-
-                    </Cell>
-                </Grid>
-
-                <Grid className="landing-grid-tablet">
-
-                    <Cell col={6} tablet={8} hideDesktop="true" hidePhone="true" align="middle">
-                        <img src="/images/avatar.png" alt="avatar" className="avatar-img" />
-
-                        <div className="banner-text-tablet">
-                            <h1>Junior Software Developer</h1>
-                            <hr />
-                            <p>HTML/CSS | JavaScript | ReactJs | Java | Python</p>
-                            <div className="social-links-tablet">
-
-                                {/*Linkedin*/}
-                                <a href="https://www.linkedin.com/in/amin-a-1b3316152/" target="_blank" rel="noopener noreferrer">
-
-                                    <i className="fa fa-linkedin-square" aria-hidden="true" />
-
-                                </a>
-
-
-                                {/*Github*/}
-                                <a href="https://github.com/aminaloui" target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-github-square" aria-hidden="true" />
-                                </a>
-
-
-                                {/*Email*/}
-                                <a href="mailto:theaminaloui@hotmail.com" target="_blank" rel="noopener noreferrer">
-                                    <i className="fa fa-envelope-square" aria-hidden="true" />
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                    </Cell>
-                </Grid>
 
             </div>
 

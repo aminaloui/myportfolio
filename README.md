@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### 'npm install netlify-cli -g'
+Connect to netlify CLI
+
+### 'netlify deploy --prod'     
+Deploy prod to netlify server
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />

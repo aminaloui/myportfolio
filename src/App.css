@@ -1,14 +1,13 @@
 .header-color {
-  background: #ad5389;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: yellow;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #bdc3c7, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 .landing-grid {
-  background: #ad5389;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: 2c3e50;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #bdc3c7, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-align: center;
   position: fixed;
   top: 0;
@@ -18,44 +17,73 @@
   overflow-x: scroll;
 }
 
-.landing-grid-phone {
-  background: #ad5389;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
- position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  
+.mdl-layout{
+  overflow-y: hidden;
+
+
+}
+/* Responsive columns
+@media  screen and (min-width: 320px) and (max-width: 710px) {
+  .projects-card {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+} */
+
+/* .project-card{
+  float: left;
+  width: 25%;
+  padding: 0 10px;
 }
 
-.landing-grid-tablet {
-  background: #ad5389;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  text-align: center;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.projects-grid{
-  display: flex;
-  flex-direction: row  row-reverse  column  column-reverse;
-}
-.projects-grid-mobile{
+.projects-grid {margin: 0 -5px;} */
+
+/* Clear floats after the columns */
+/* .projects-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+/* .projects-grid-mobile{
   display: inline;
   
-}
+} */
 
 .avatar-img{
-  height: 350px;
-  padding-top: 5em;
+  height: 450px;
+  padding-top: 6em;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 710px){
+  .avatar-img{
+    height: 300px;
+    padding-top: 3em;
+  }
+  
+}
+
+.avatar-cv{
+ height: 350px;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 710px){
+  .avatar-cv{
+    height: 350px;
+    padding-top: 6em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }
+
+
 /*Desktop*/
 .banner-text-desktop{
 background-color: black;
@@ -65,7 +93,7 @@ margin: auto;
 border-radius: 10px;
 }
 .banner-text-desktop h1{
-font-size: 66px;
+font-size: 60px;
 font-weight: bold;
 color: white;
 
@@ -82,64 +110,11 @@ margin: auto;
   font-size: 20px;
   padding: 1em;
 }
-/*Mobile*/
-.banner-text-mobile{
-  background-color: black;
-  opacity: .8;
-  width: 75%;  
-  margin: auto;
-  border-radius: 10px;
-  }
-  .banner-text-mobile h1{
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  
-  }
-  
-  .banner-text-mobile hr{
-  border-top: 5px dotted white;
-  width: 50%;
-  margin: auto;
-  }
-  
-  .banner-text-mobile p {
-    color: white;
-    font-size: 20px;
-    padding: 1em;
-  }
 
-  /*tablet*/
-.banner-text-tablet{
-  background-color: black;
-  opacity: .8;
-  width: 75%;  
-  margin: auto;
-  border-radius: 10px;
-  }
-  .banner-text-tablet h1{
-  font-size: 40px;
-  font-weight: bold;
-  color: white;
-  
-  }
-  
-  .banner-text-tablet hr{
-  border-top: 5px dotted white;
-  width: 50%;
-  margin: auto;
-  }
-  
-  .banner-text-tablet p {
-    color: white;
-    font-size: 20px;
-    padding: 1em;
-  }
   .cv-icons{
     display: flex;
     width: 50%;
-    margin: auto;
-    
+    margin: 15px;
     
     }
     
@@ -153,53 +128,19 @@ margin: auto;
   /*Desktop*/
 .social-links-desktop {
 display: flex;
-justify-content: space-between;
-width: 50%;
+justify-content: space-evenly;
+width:60%;
 margin: auto;
-
 
 }
 
 .social-links-desktop i {
-color: white;
-font-size: 5em;
+  color: white;
+  font-size: 5em;
 padding: 8px;
 
-
 }
-/*Mobile*/
-.social-links-mobile {
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-  margin: auto;
-  
-  
-  }
-  .social-links-mobile i {
-  color: white;
-  font-size: 4em;
-  padding: 8px;
-  
-  
-  }
 
-    /*tablet*/
-.social-links-tablet {
-  display: flex;
-  justify-content: space-between;
-  width: 75%;
-  margin: auto;
-  
-  
-  }
-  .social-links-tablet i {
-  color: white;
-  font-size: 4em;
-  padding: 3px;
-  
-  
-  }
 
 .contact-body{
   margin: auto;
@@ -256,4 +197,23 @@ padding: 3em;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.moveUpDown{
+  animation-name : mymove;
+  animation-iteration-count : infinite;
+  animation-direction : alternate;
+  animation-duration : 1500ms;
+}
+
+@keyframes mymove {
+  from {transform: translateY(0px);}
+  to {transform: translateY(20px);}
+}
+
+.zoom-box {
+  transition: transform .2s; /* Animation */
+}
+.zoom-box:hover {
+  transform: scale(1.1);
 }

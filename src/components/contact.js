@@ -37,7 +37,7 @@ mogelijk ervaring op programmeergebied te kunnen opdoen.</p>
                                 <ListItem>
                                     <ListItemContent style={{ fontSize: '30px', fontFamily: 'Anton' }}>
                                         <i className="fa fa-envelope" aria-hidden="true" />
-                                        Theaminaloui@hotmail.com
+                                        Aminaloui1@gmail.com
                                         </ListItemContent>
                                 </ListItem>
 
