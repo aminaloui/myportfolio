@@ -52,6 +52,7 @@
 } */
 
 .avatar-img{
+
   height: 450px;
   padding-top: 6em;
 }
@@ -217,3 +218,4 @@ padding: 3em;
 .zoom-box:hover {
   transform: scale(1.1);
 }
+
