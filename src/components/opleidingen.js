@@ -8,7 +8,7 @@ class Opleidingen extends Component {
                 <Grid>
                     <Cell col={4}>
 
-                        <p>{this.props.startYear} - {this.props.endYear} &nbsp;	<i class={this.props.icon} aria-hidden="true"></i></p>
+                        <p>{this.props.startYear} - {this.props.endYear} &nbsp;	<i className={this.props.icon} aria-hidden="true"></i></p>
 
 
 

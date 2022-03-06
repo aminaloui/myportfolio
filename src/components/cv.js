@@ -35,7 +35,7 @@ class Cv extends Component {
                         <h5>Geboorte datum</h5>
                         <p>19-08-1997</p>
                         <h5>Rijbewijs</h5>
-                        <p>Ja &nbsp; <i class="fa fa-car" aria-hidden="true"></i></p>
+                        <p>B&nbsp; <i className="fa fa-car" aria-hidden="true"></i></p>
                         
                         <hr style={{ borderTop: '3px solid #2c3e50', width: '50%' }} />
                     </Cell>
@@ -73,12 +73,7 @@ class Cv extends Component {
                         <hr style={{ borderTop: '3px solid #2c3e50' }} />
 
                         <h3>Werkervaringen</h3>
-                         <Werkervaringen
-                            startYear={"09-2020"}
-                            endYear={"Heden"}
-                            jobName={"9 Knots - De Kwakel, Uithoorn"}
-                            jobDescription={"Als Junior Developer bij 9 Knots hou ik mij bezig met het ontwikkelen van bedrijfssoftware. Dit wordt gedaan binnen 9 Knots haar eigen framework ,genaamd CaseMaster, in combinatie van SQL. Binnen het framework werdt er ook met HTML,CSS en JavaScript gewerkt. De klanten van 9 Knots komen voornamelijk uit de sierteeltsector."}
-                        />
+                    
                         <Werkervaringen
                             startYear={"September 2021"}
                             endYear={"Heden"}
@@ -105,7 +100,7 @@ class Cv extends Component {
                         <hr style={{ borderTop: '3px solid #2c3e50' }} />
                         <h2>Skills</h2>
                         
-                        <Skills
+                        <Skills 
                             skill={"HTML"}
                             progress={80}
                         />

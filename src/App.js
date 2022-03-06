@@ -8,14 +8,18 @@ import Projecten from './components/projecten';
 import { AnimatePresence } from 'framer-motion';
 import { Route, NavLink, Link, Switch } from 'react-router-dom';
 import LandingPage from './components/landingpage';
+import drawertoggle from './components/drawertoggle'
 
 
 
 
 function App() {
+
+ 
+
   return (
     <div className="demo-big-content">
-     
+   
       <Layout>
         <Header className="header-color" title={<Link style={{  textDecoration: 'none', color: 'white', fontSize: '35px', fontFamily: 'Nunito ,sans-serif' }} to="/">Mijn Portfolio </Link>} scroll>
           <Navigation>
@@ -27,9 +31,9 @@ function App() {
         
         <Drawer title={<Link style={{  textDecoration: 'none', color: 'black', fontFamily: 'Nunito ,sans-serif' }} to="/">Mijn Portfolio </Link>}>
           <Navigation>
-            <NavLink to="/cv" style={{ fontSize: '20px', fontFamily: 'Nunito ,sans-serif' }}>CV</NavLink>
-            <NavLink to="/overmij" style={{ fontSize: '20px', fontFamily: 'Nunito ,sans-serif' }}>Over Mij</NavLink>
-            <NavLink to="/projecten" style={{ fontSize: '20px', fontFamily: 'Nunito ,sans-serif' }}>Projecten</NavLink>
+            <NavLink to="/cv" onClick={drawertoggle} style={{ fontSize: '20px', fontFamily: 'Nunito ,sans-serif' }}>CV</NavLink>
+            <NavLink to="/overmij" onClick={drawertoggle} style={{ fontSize: '20px', fontFamily: 'Nunito ,sans-serif' }}>Over Mij</NavLink>
+            <NavLink to="/projecten" onClick={drawertoggle} style={{ fontSize: '20px', fontFamily: 'Nunito ,sans-serif' }}>Projecten</NavLink>
           </Navigation>
         </Drawer>
         <Content>
@@ -45,6 +49,7 @@ function App() {
           </AnimatePresence>
         </Content>
       </Layout>
+      
     </div>
 
   );
