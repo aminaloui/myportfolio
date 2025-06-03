@@ -27,7 +27,7 @@ class LandingPage extends Component {
                             typeSpeed={70}
                             deleteSpeed={150}
                             delaySpeed={1000}
-                            words={[' Front-end Developer', ' Software Developer', ' App Developer']}
+                            words={[' Software Developer', ' Data Engineer',' Front-end Developer']}
                             />
                             </h1>
                             <hr/>
