@@ -1,3 +1,3 @@
 [build]
   command = "echo 'Statische site, geen build nodig'"
-  publish = "."
+  publish = "public"
