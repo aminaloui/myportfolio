@@ -403,7 +403,7 @@ nav.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.07);background:rgba(250,250,248,.
 .tl-dot.on{transform:scale(1);opacity:1;animation:ring 1.4s ease-out 1}
 @keyframes ring{0%{box-shadow:0 0 0 2px var(--amber),0 0 0 2px rgba(232,160,32,.6)}100%{box-shadow:0 0 0 2px var(--amber),0 0 0 14px rgba(232,160,32,0)}}
 .tl-item{transition:transform .3s}
-.tl-item:hover{transform:translateX(6px)}
+
 
 /* CTA */
 .cta-section{background:linear-gradient(120deg,var(--teal),#17524d,var(--teal));background-size:200% 200%;animation:bgshift 14s ease infinite}
@@ -496,6 +496,9 @@ html{overflow-x:clip}
 .tl-item{z-index:2}
 .tl-dot{z-index:3}
 .section-header .eyebrow+.section-sub{margin-top:.6rem}
+
+/* mobiel: de titel ligt boven het fotovlak, zodat de staart van de g niet wordt afgekapt */
+@media(max-width:900px){.hero-title{position:relative;z-index:3;padding-bottom:.25em}}
 </style>
 </head>
 <body>
