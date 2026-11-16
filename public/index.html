@@ -424,7 +424,10 @@ nav.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.07);background:rgba(250,250,248,.
 
 html{overflow-x:clip}
 
-.hero-title>.ch{color:var(--teal)}
+.hero-title .t-pre,.hero-title .t-een,.hero-title .t-dyn{color:var(--teal);white-space:pre-wrap}
+.hero-title .t-dyn.amin{color:var(--amber)}
+.hero-title .t-dyn.data{color:var(--coral)}
+.hero-title .t-dyn.ai{color:#0A8BBD}
 .fl{position:absolute;z-index:3;background:var(--white);color:var(--teal);font-weight:600;font-size:.82rem;padding:.5rem 1rem;border-radius:50px;box-shadow:0 10px 26px rgba(31,107,100,.18);border:1px solid rgba(31,107,100,.15);animation:bob 5s ease-in-out infinite;pointer-events:none;white-space:nowrap}
 .fl i{font-style:normal;margin-right:.4rem}
 .fl.f1{left:66%;top:30%}
@@ -479,6 +482,20 @@ html{overflow-x:clip}
 @keyframes paintIn{from{-webkit-mask-position:100% 0;mask-position:100% 0}to{-webkit-mask-position:0 100%;mask-position:0 100%}}
 @keyframes personIn{to{opacity:1;transform:translate3d(calc(var(--mx,0)*1px),calc(var(--my,0)*1px + var(--sy,0)*1px),0) scale(1)}}
 @media(prefers-reduced-motion:reduce){.hs-brush{animation:none;-webkit-mask-position:0 100%;mask-position:0 100%}.hs-person{animation:none;opacity:1;transform:none}}
+
+/* mobiel: foto direct onder de titel */
+@media(max-width:900px){
+  .hero-left{display:contents}
+  .hero-title{order:1;padding:2.2rem 5% 0;margin-bottom:0;width:100%}
+  .hero-right{order:2;height:min(108vw,440px)}
+  .hero-stat{order:3;padding:.4rem 5% 2rem}
+}
+
+/* tijdlijn: lijn loopt onder de bolletjes door */
+.timeline::before,.timeline::after{z-index:1}
+.tl-item{z-index:2}
+.tl-dot{z-index:3}
+.section-header .eyebrow+.section-sub{margin-top:.6rem}
 </style>
 </head>
 <body>
@@ -503,9 +520,7 @@ html{overflow-x:clip}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
-    <h1 class="hero-title">Hoi, Ik <br> ben <span>Amin</span></h1>
-    <p class="hero-role">Data Engineer<br>&amp; GenAI Engineer</p>
-    <a href="mailto:aminaloui1@gmail.com" class="hero-email">Stuur me een mailtje!</a>
+    <h1 class="hero-title" aria-label="Hoi, ik ben Amin"><span class="t-pre" aria-hidden="true">Hoi, ik ben </span><span class="t-een" aria-hidden="true"></span><span class="t-dyn amin" aria-hidden="true">Amin</span><span class="caret off" aria-hidden="true"></span></h1>
     <div class="hero-stat">
       <span class="hero-stat-num"><span class="count" data-to="5">0</span>+</span>
       <span class="hero-stat-label">Jaar<br>Ervaring</span>
@@ -529,9 +544,9 @@ html{overflow-x:clip}
     <div class="two-col">
       <div>
         <div class="section-header reveal">
-          <p class="eyebrow">Wat ik doe</p>
-          <h2 class="section-title">Hoe kan ik je helpen?</h2>
-          <p class="section-sub">Data Engineer met een hbo-bachelor ICT en ruim vijf jaar ervaring in softwareontwikkeling en data. Mijn dataproducten vormen de basis voor BI-dashboards en rapportages, en ik bouwde zelf een LLM-toepassing van begin tot eind. Ik vertaal technische concepten naar begrijpelijke taal voor diverse stakeholders.</p>
+          <p class="eyebrow">Over mij</p>
+          <h2 class="section-title">Wie ik ben</h2>
+          <p class="section-sub">Ik ben een data engineer met een hbo-bachelor ICT en ruim vijf jaar ervaring in softwareontwikkeling en data. De dataproducten die ik bouw vormen de basis van BI-dashboards en rapportages. Daarnaast heb ik zelf een LLM-toepassing van begin tot eind gebouwd. Technische concepten vertaal ik naar begrijpelijke taal voor stakeholders met uiteenlopende achtergronden.</p>
         </div>
         <div class="stats-row reveal">
           <div class="stat-card">
@@ -583,7 +598,7 @@ html{overflow-x:clip}
   <div class="section-inner">
     <div class="reveal">
       <p class="eyebrow">Portfolio</p>
-      <h2 class="section-title">Projecten waar ik aan werkte</h2>
+      <h2 class="section-title">Projecten waar ik aan heb gewerkt</h2>
       <p class="section-sub" style="margin-top:.6rem">Eigen producten en dataprojecten uit mijn werk</p>
     </div>
     <div class="works-grid">
@@ -792,40 +807,70 @@ function countUp(el){
 const heroCount = $('.hero-stat .count');
 if (heroCount) setTimeout(() => countUp(heroCount), reduce ? 0 : 2300);
 
-/* typ-effect */
+/* typ-effect: Data Engineer -> GenAI Engineer -> Amin */
 const title = $('.hero-title');
-title.setAttribute('aria-label', title.textContent.replace(/\s+/g, ' ').trim());
-(function wrap(node){
-  [...node.childNodes].forEach(n => {
-    if (n.nodeType === 3) {
-      const f = document.createDocumentFragment();
-      let txt = n.textContent;
-      if (n.previousSibling && n.previousSibling.tagName === 'BR') txt = txt.replace(/^\s+/, '');
-      if (n.nextSibling && n.nextSibling.tagName === 'BR') txt = txt.replace(/\s+$/, '');
-      [...txt].forEach(c => {
-        const s = document.createElement('span');
-        s.className = 'ch hid'; s.textContent = c; s.setAttribute('aria-hidden', 'true');
-        f.appendChild(s);
-      });
-      n.replaceWith(f);
-    } else if (n.nodeType === 1 && n.tagName !== 'BR') wrap(n);
-  });
-})(title);
-const chars = $$('.ch', title);
-if (reduce) chars.forEach(c => c.classList.remove('hid'));
-else {
-  const caret = document.createElement('span');
-  caret.className = 'caret';
-  let i = 0;
-  const step = () => {
-    if (i < chars.length) {
-      chars[i].classList.remove('hid'); i++;
-      if (i < chars.length) chars[i].before(caret); else chars[i - 1].after(caret);
-      setTimeout(step, 70 + Math.random() * 60);
-    } else setTimeout(() => caret.classList.add('off'), 1800);
+const tPre = $('.t-pre', title), tEen = $('.t-een', title), tDyn = $('.t-dyn', title), caret = $('.caret', title);
+if (!reduce) {
+  const PRE = 'Hoi, ik ben ';
+  /* kleur per fase: data (koraal), ai (blauw), amin (amber) */
+  const show = (pre, een, dyn, cls) => {
+    tPre.textContent = pre; tEen.textContent = een; tDyn.textContent = dyn;
+    tDyn.className = 't-dyn' + (cls ? ' ' + cls : '');
   };
-  chars[0].before(caret);
-  setTimeout(step, 500);
+  const measure = () => { /* reserveer de hoogte van de langste variant, zodat de foto niet verspringt */
+    const st = [tPre.textContent, tEen.textContent, tDyn.textContent, tDyn.className];
+    title.style.minHeight = '0'; show(PRE, 'een ', 'GenAI Engineer', 'ai');
+    const h = title.offsetHeight; title.style.minHeight = h + 'px';
+    tPre.textContent = st[0]; tEen.textContent = st[1]; tDyn.textContent = st[2]; tDyn.className = st[3]; return h;
+  };
+  let reserved = 0, finished = false;
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const typeTo = async (een, text, cls, speed) => {
+    for (let k = 1; k <= text.length; k++) { show(PRE, een, text.slice(0, k), cls); await sleep(speed + Math.random() * speed * .8); }
+  };
+  const eraseTo = async (een, text, cls, speed) => {
+    for (let k = text.length; k > 0; k--) { show(PRE, een, text.slice(0, k - 1), cls); await sleep(speed); }
+  };
+  const LOOP_MS = 60000; /* de animatie start elke minuut opnieuw */
+  const run = async () => {
+    let first = true;
+    for (;;) {
+      const t0 = Date.now();
+      finished = false; caret.classList.remove('off');
+      if (first) { show('', '', '', ''); reserved = measure(); first = false; }
+      await sleep(500);
+      for (let k = 1; k <= PRE.length; k++) { show(PRE.slice(0, k), '', '', ''); await sleep(70 + Math.random() * 50); }
+      for (let k = 1; k <= 4; k++) { show(PRE, 'een '.slice(0, k), '', ''); await sleep(70 + Math.random() * 50); }
+      await typeTo('een ', 'Data Engineer', 'data', 65);
+      await sleep(1100);
+      await eraseTo('een ', 'Data Engineer', 'data', 45);
+      await typeTo('een ', 'GenAI Engineer', 'ai', 65);
+      await sleep(1100);
+      await eraseTo('een ', 'GenAI Engineer', 'ai', 40);
+      for (let k = 3; k >= 0; k--) { show(PRE, 'een '.slice(0, k), '', ''); await sleep(40); }
+      await sleep(150);
+      await typeTo('', 'Amin', 'amin', 110);
+      finished = true;
+      /* alleen op mobiel: ruimte soepel teruggeven zodat de foto direct onder de titel komt; de tekst zelf blijft staan */
+      if (matchMedia('(max-width:900px)').matches) {
+        title.style.transition = 'none'; title.style.minHeight = '0';
+        const h = title.offsetHeight; title.style.minHeight = reserved + 'px'; void title.offsetHeight;
+        title.style.transition = 'min-height .7s ease'; title.style.minHeight = h + 'px';
+        setTimeout(() => { title.style.minHeight = ''; title.style.transition = ''; }, 800);
+      }
+      setTimeout(() => caret.classList.add('off'), 1800);
+      /* wacht tot de minuut om is en wis dan alles letter voor letter */
+      await sleep(Math.max(2500, LOOP_MS - (Date.now() - t0) - 1500));
+      while (document.hidden) await sleep(1000);
+      caret.classList.remove('off');
+      title.style.transition = 'min-height .4s ease'; title.style.minHeight = reserved + 'px';
+      for (let k = 4; k >= 0; k--) { show(PRE, '', 'Amin'.slice(0, k), k ? 'amin' : ''); await sleep(60); }
+      for (let k = PRE.length - 1; k >= 0; k--) { show(PRE.slice(0, k), '', '', ''); await sleep(25); }
+      await sleep(400);
+    }
+  };
+  run();
+  let rt; addEventListener('resize', () => { if (finished) return; clearTimeout(rt); rt = setTimeout(() => { reserved = measure(); }, 150); });
 }
 
 /* reveal */
